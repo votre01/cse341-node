@@ -40,6 +40,7 @@ async function addMultipleMovies (client, movies) {
     console.log(result.insertedIds);    
 }
 
+// Find single movie by title
 async function findMovieByName(client, movieTitle) {
     const result = await client.db('sample_mflix').collection('movies').findOne({title: movieTitle});
     if (result) {
